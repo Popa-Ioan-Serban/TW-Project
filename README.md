@@ -12,4 +12,6 @@ Structura principala:
 - comenzi
 - cosul meu
 
+E ok asa!
+
 Daca aveti alte idei puteti sa le adaugati in continuare

@@ -13,3 +13,5 @@ Structura principala:
 - cosul meu
 
 Daca aveti alte idei puteti sa le adaugati in continuare
+
+Modificare facuta de Dani.

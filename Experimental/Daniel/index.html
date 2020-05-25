@@ -66,38 +66,21 @@
         </header>
 
         <main>
-            <div class="slidershow middle_slide">
-                <div class="slides">
-                    <input id="b1" type="radio" name="button" checked>
-                    <input id="b2" type="radio" name="button">
-                    <input id="b3" type="radio" name="button">
-                    <input id="b4" type="radio" name="button">
-                    <input id="b5" type="radio" name="button">
+            <div id="slider">
+                <nav class="container">
+                    <div class="slide"><img src="./images/newsImage1.jpg" class="navigation_image"></div>
+                    <div class="slide"><img src="./images/newsImage2.jpg" class="navigation_image"></div>
+                    <div class="slide"><img src="./images/newsImage3.jpg" class="navigation_image"></div>
+                    <div class="slide"><img src="./images/newsImage4.jpg" class="navigation_image"></div>
+                    <div class="slide"><img src="./images/newsImage5.jpg" class="navigation_image"></nav>
+                </nav>
 
-                    <div class="slide first">
-                        <img src="./images/newsImage1.jpg" alt="">
-                    </div>
-                    <div class="slide second">
-                        <img src="./images/newsImage2.jpg" alt="">
-                    </div>
-                    <div class="slide third">
-                        <img src="./images/newsImage3.jpg" alt="">
-                    </div>
-                    <div class="slide fourth">
-                        <img src="./images/newsImage4.jpg" alt="">
-                    </div>
-                    <div class="slide fifth">
-                        <img src="./images/newsImage5.jpg" alt="">
-                    </div>
-
-                    <div class="navigator">
-                        <label for="b1" class="bar"></label>
-                        <label for="b2" class="bar"></label>
-                        <label for="b3" class="bar"></label>
-                        <label for="b4" class="bar"></label>
-                        <label for="b5" class="bar"></label>
-                    </div>
-
+                <div class="points">
+                    <span class="point" onlick="currentSlide(1)"></span>
+                    <span class="point" onlick="currentSlide(2)"></span>
+                    <span class="point" onlick="currentSlide(3)"></span>
+                    <span class="point" onlick="currentSlide(4)"></span>
+                    <span class="point" onlick="currentSlide(5)"></span>
                 </div>
             </div>
 
@@ -115,6 +98,7 @@
                     (4) wrapper pentru o lista cu 5
                         dintre cele mai cumparate jucarii
             -->
+        <script src="./myscripts.js"> </script>
         </main>
 
         <footer>

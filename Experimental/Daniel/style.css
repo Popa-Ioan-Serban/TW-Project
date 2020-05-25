@@ -19,9 +19,10 @@ html, body {
     width: auto;
 }
 
-#icon {
+.icon {
     height: 25px;
     width: 25px;
+    padding-right: 7px;
 }
 
 .vertical_center {
@@ -31,14 +32,11 @@ html, body {
     width: 100%;
 }
 
-.left_space {
+.main_bar_buttons {
     padding-left: 15px;
     display: flex;
     align-items: center;
-}
-
-.left_space a {
-    padding-left: 7px;
+    cursor: pointer;
 }
 
 #search_bar {
@@ -54,9 +52,6 @@ a {
 }
 
 .font_style {
-    color: #ffffff;
-    font-family: monospace;
-    font-weight: bold;
     font-size: 15px;
     text-align: center;
 }
@@ -138,4 +133,44 @@ li.menu_option:hover {
 
 .active, .point:hover {
     background-color: red;
+}
+
+#social_media {
+    background-color: #a80000;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+#find_us_label {
+    font-size: 25px;
+    text-align: center;
+}
+
+#social_media_icons {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.social_media_icon {
+    height: 100%;
+    width: auto;
+}
+
+#copyright {
+    background-color: #d10404;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#copyright_text {
+    font-size: 12px;
+    text-align: center;
 }

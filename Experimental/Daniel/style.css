@@ -127,12 +127,18 @@ li.menu_option:hover {
 
 .points{
     text-align: center;
-    top:-70px;
+    margin-top:-70px;
     position: relative;
 }
 
 .active, .point:hover {
     background-color: red;
+}
+
+.default_font_style {
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
 }
 
 #social_media {

@@ -27,15 +27,15 @@
                         <img id="icon" src="images/search.png" alt="Search Icon">
                     </div>
 
-                    <div class="left_space">
-                        <img id="icon" src="images/user.png" alt="User Image Icon">
-                        <a href="sign.html" class="font_style">Sign In / Sign Up</a>
-                    </div>
+                    <a href="sign.html" class="main_bar_buttons font_style default_font_style">
+                        <img class="icon" src="images/user.png" alt="User Image Icon">
+                        Sign In / Sign Up
+                    </a>
 
-                    <div class="left_space">
-                        <img id="icon" src="images/basket.png" alt="Basket Icon">
-                        <a href="basket.html" class="font_style">Basket</a>
-                    </div>
+                    <a href="basket.html" class="main_bar_buttons font_style default_font_style">
+                        <img class="icon" src="images/basket.png" alt="Basket Icon">
+                        Basket
+                    </a>
                 </div>
             </section>
 
@@ -47,25 +47,61 @@
                 -->
                 <ul id="menu_list" class="middle">
                     <li class="menu_option">
-                        <div class="font_style">item1</div>
+                        <div class="font_style default_font_style">item1</div>
                     </li>
                     <li class="menu_option">
-                        <div class="font_style">item2</div>
+                        <div class="font_style default_font_style">item2</div>
                     </li>
                     <li class="menu_option">
-                        <div class="font_style">item3</div>
+                        <div class="font_style default_font_style">item3</div>
                     </li>
                     <li class="menu_option">
-                        <div class="font_style">item4</div>
+                        <div class="font_style default_font_style">item4</div>
                     </li>
                     <li class="menu_option">
-                        <div class="font_style">item5</div>
+                        <div class="font_style default_font_style">item5</div>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <main>
+            <div class="slidershow middle_slide">
+                <div class="slides">
+                    <input id="b1" type="radio" name="button" checked>
+                    <input id="b2" type="radio" name="button">
+                    <input id="b3" type="radio" name="button">
+                    <input id="b4" type="radio" name="button">
+                    <input id="b5" type="radio" name="button">
+
+                    <div class="slide first">
+                        <img src="./images/newsImage1.jpg" alt="">
+                    </div>
+                    <div class="slide second">
+                        <img src="./images/newsImage2.jpg" alt="">
+                    </div>
+                    <div class="slide third">
+                        <img src="./images/newsImage3.jpg" alt="">
+                    </div>
+                    <div class="slide fourth">
+                        <img src="./images/newsImage4.jpg" alt="">
+                    </div>
+                    <div class="slide fifth">
+                        <img src="./images/newsImage5.jpg" alt="">
+                    </div>
+
+                    <div class="navigator">
+                        <label for="b1" class="bar"></label>
+                        <label for="b2" class="bar"></label>
+                        <label for="b3" class="bar"></label>
+                        <label for="b4" class="bar"></label>
+                        <label for="b5" class="bar"></label>
+                    </div>
+
+                </div>
+            </div>
+
+
             <!-- 
                 (*) partea principala a paginii
                 (*) contine:
@@ -89,6 +125,30 @@
                     (2) find us on (social media)
                     (3) copyright claim
             -->
+
+            <section id="social_media">
+                <label id="find_us_label" class="default_font_style">Find Us On</label>
+
+                <div id="social_media_icons">
+                    <a href="https://www.facebook.com">
+                        <img class="social_media_icon" src="images/facebook.png" alt="Facebook Icon">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img class="social_media_icon" src="images/instagram.png" alt="Instagram Icon">
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <img class="social_media_icon" src="images/twitter.png" alt="Twitter Icon">
+                    </a>
+                    <a href="https://www.youtube.com">
+                        <img class="social_media_icon" src="images/youtube.png" alt="YouTube Icon">
+                    </a>
+                </div>
+            </section>
+            <section id="copyright">
+                <a href="https://www.info.uaic.ro/" class="default_font_style">
+                    © 2020 Faculty of Computer Science, Alexandru Ioan Cuza University of Iasi
+                </a>
+            </section>
         </footer>
     </body>
 </html>

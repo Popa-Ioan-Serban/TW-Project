@@ -1,47 +1,45 @@
-var slideIndex = 0;
-showSlides();
-var slides,dots;
+var slide_index = 0
+var slides_collection
+var points
+show()
+var time
 
-function showSlides() {
-    var i;
-    slides = document.getElementsByClassName("slide");
-    dots = document.getElementsByClassName("point");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
+function show() {
+    var i
+    slides_collection = document.getElementsByClassName("slide")
+    points = document.getElementsByClassName("point")
+    for (i = 0; i < slides_collection.length; i++) {
+       slides_collection[i].style.display = "none"
     }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    slide_index++
+    if (slide_index > slides_collection.length) {
+        slide_index = 1
+    }    
+    for (i = 0; i < points.length; i++) {
+        points[i].className = points[i].className.replace(" active", "")
     }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 8000); // Change image every 8 seconds
+    slides_collection[slide_index-1].style.display = "block"
+    points[slide_index-1].className += " active"
+    time = setTimeout(show, 2000)
 }
 
-function plusSlides(position) {
-    slideIndex +=position;
-    if (slideIndex> slides.length) {slideIndex = 1}
-    else if(slideIndex<1){slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+function goToSlide(index) {
+    if (index > slides_collection.length)
+        index = index % slides_collection.length;
+    for (i = 0; i < slides_collection.length; i++)
+       slides_collection[i].style.display = "none"
+    for (i = 0; i < points.length; i++)
+        points[i].className = points[i].className.replace(" active", "")
+    slides_collection[index-1].style.display = "block"
+    points[index-1].className += " active"
+    slide_index = index
 }
 
-function currentSlide(index) {
-    if (index> slides.length) {index = 1}
-    else if(index<1){index = slides.length}
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[index-1].style.display = "block";  
-    dots[index-1].className += " active";
+function pause() {
+    window.clearTimeout(time)
+}
+
+function resume() {
+    window.clearTimeout(time)
+    time = window.setTimeout(show, 2000)
 }

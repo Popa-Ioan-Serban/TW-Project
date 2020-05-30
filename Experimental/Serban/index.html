@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 
+<!--
+    To do:
+    - insert images for toy offers from top 5
+    - load dinamicaly from database average score vote and modify stars loading bar
+    - create anchors for toy offers
+    - modify style for last 2 new items (choice by age, top most popular)
+    - scalability @media
+-->
+
 <html>
     <head>
         <title>Toys Shop</title>
@@ -66,42 +75,6 @@
         </header>
 
         <main>
-            <div class="slidershow middle_slide">
-                <div class="slides">
-                    <input id="b1" type="radio" name="button" checked>
-                    <input id="b2" type="radio" name="button">
-                    <input id="b3" type="radio" name="button">
-                    <input id="b4" type="radio" name="button">
-                    <input id="b5" type="radio" name="button">
-
-                    <div class="slide first">
-                        <img src="./images/newsImage1.jpg" alt="">
-                    </div>
-                    <div class="slide second">
-                        <img src="./images/newsImage2.jpg" alt="">
-                    </div>
-                    <div class="slide third">
-                        <img src="./images/newsImage3.jpg" alt="">
-                    </div>
-                    <div class="slide fourth">
-                        <img src="./images/newsImage4.jpg" alt="">
-                    </div>
-                    <div class="slide fifth">
-                        <img src="./images/newsImage5.jpg" alt="">
-                    </div>
-
-                    <div class="navigator">
-                        <label for="b1" class="bar"></label>
-                        <label for="b2" class="bar"></label>
-                        <label for="b3" class="bar"></label>
-                        <label for="b4" class="bar"></label>
-                        <label for="b5" class="bar"></label>
-                    </div>
-
-                </div>
-            </div>
-
-
             <!-- 
                 (*) partea principala a paginii
                 (*) contine:
@@ -115,6 +88,132 @@
                     (4) wrapper pentru o lista cu 5
                         dintre cele mai cumparate jucarii
             -->
+
+            <section>
+                <div id="slider">
+                    <nav class="container" onmouseover="pause()" onmouseout="resume()">
+                        <div class="slide"><img src="./images/newsImage1.jpg" class="navigation_image"></div>
+                        <div class="slide"><img src="./images/newsImage2.jpg" class="navigation_image"></div>
+                        <div class="slide"><img src="./images/newsImage3.jpg" class="navigation_image"></div>
+                        <div class="slide"><img src="./images/newsImage4.jpg" class="navigation_image"></div>
+                        <div class="slide"><img src="./images/newsImage5.jpg" class="navigation_image"></nav>
+                    </nav>
+
+                    <div class="points">
+                        <span class="point" onclick="goToSlide(1)" onmouseover="pause()" onmouseout="resume()" ></span>
+                        <span class="point" onclick="goToSlide(2)" onmouseover="pause()" onmouseout="resume()"></span>
+                        <span class="point" onclick="goToSlide(3)" onmouseover="pause()" onmouseout="resume()"></span>
+                        <span class="point" onclick="goToSlide(4)" onmouseover="pause()" onmouseout="resume()"></span>
+                        <span class="point" onclick="goToSlide(5)" onmouseover="pause()" onmouseout="resume()"></span>
+                    </div>
+                </div>
+                <script src="myscripts.js"></script>
+            </section>
+
+            <section>
+                <p class="paragraph_format middle">Choice by age</p>
+                <ul id="age_selector" class="middle">
+                    <li>
+                        <a href="">
+                            <figure class="age_pick circle_pattern_1">
+                                <label class="age_format age_format_1 middle">0-3</label>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <figure class="age_pick circle_pattern_2">
+                                <label class="age_format age_format_2 middle">3-6</label>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <figure class="age_pick circle_pattern_1">
+                                <label class="age_format age_format_1 middle">6-11</label>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <figure class="age_pick circle_pattern_2">
+                                <label class="age_format age_format_2 middle">11+</label>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="toy_top_wrapper">
+                <p class="paragraph_format middle">Top 5 most popular toys</p>
+                <ul id="toy_top" class="middle">
+                    <li class="toy_option">
+                        <img class="toy_image" src="images/no-image.jpg">
+                        <label class="toy_offer_font_style toy_offer_name">toy name #1</label>
+                        <label class="toy_offer_font_style toy_offer_price">xxx.xx €</label>
+                        <span class="vote_stars_container">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <label class="toy_offer_font_style toy_offer_votes">(xxx)</label>
+                        </span>
+                    </li>
+                    <li class="toy_option">
+                        <img class="toy_image" src="images/no-image.jpg">
+                        <label class="toy_offer_font_style toy_offer_name">toy name #2</label>
+                        <label class="toy_offer_font_style toy_offer_price">xxx.xx €</label>
+                        <span class="vote_stars_container">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <label class="toy_offer_font_style toy_offer_votes">(xxx)</label>
+                        </span>
+                    </li>
+                    <li class="toy_option">
+                        <img class="toy_image" src="images/no-image.jpg">
+                        <label class="toy_offer_font_style toy_offer_name">toy name #3</label>
+                        <label class="toy_offer_font_style toy_offer_price">xxx.xx €</label>
+                        <span class="vote_stars_container">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <label class="toy_offer_font_style toy_offer_votes">(xxx)</label>
+                        </span>
+                    </li>
+                    <li class="toy_option">
+                        <img class="toy_image" src="images/no-image.jpg">
+                        <label class="toy_offer_font_style toy_offer_name">toy name #4</label>
+                        <label class="toy_offer_font_style toy_offer_price">xxx.xx €</label>
+                        <span class="vote_stars_container">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <label class="toy_offer_font_style toy_offer_votes">(xxx)</label>
+                        </span>
+                    </li>
+                    <li class="toy_option">
+                        <img class="toy_image" src="images/no-image.jpg">
+                        <label class="toy_offer_font_style toy_offer_name">toy name #5</label>
+                        <label class="toy_offer_font_style toy_offer_price">xxx.xx €</label>
+                        <span class="vote_stars_container">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star checked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <img class="vote_star unchecked" src="images/star.png">
+                            <label class="toy_offer_font_style toy_offer_votes">(xxx)</label>
+                        </span>
+                    </li>
+                </ul>
+            </section>
         </main>
 
         <footer>

@@ -20,7 +20,7 @@ function show() {
     }
     slides_collection[slide_index-1].style.display = "block"
     points[slide_index-1].className += " active"
-    time = setTimeout(show, 2000)
+    time = setTimeout(show, 4000)
 }
 
 function goToSlide(index) {
